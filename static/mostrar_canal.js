@@ -46,6 +46,9 @@ function mostrarCanales(id) {
                     
                     Mostrar_mensajes(id_canal)
 
+                    const contenedorChat = document.querySelector('.contenedor-chat');
+                    contenedorChat.style.display = 'block';
+
                 });
                 let salir = document.getElementById('salir');
                 
