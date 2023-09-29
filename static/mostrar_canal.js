@@ -54,6 +54,7 @@ function mostrarCanales(id) {
                 
                 salir.addEventListener('click', function () {
                     tabla.innerHTML = "";
+                    
                     contenedor2.style.display = 'none';
 
                 });

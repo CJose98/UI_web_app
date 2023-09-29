@@ -99,6 +99,17 @@ function Mostrar_mensajes(id_canal) {
                     Mostrar_mensajes(id_canal);
                 });
 
+
+                let salir = document.getElementById('salir');
+                
+                salir.addEventListener('click', function () {
+                    ingresar_Datos_Pantalla.innerHTML = "";
+                    const contenedorChat = document.querySelector('.contenedor-chat');
+                    contenedorChat.style.display = 'none';
+                });
+
+
+
               }
         };
     })
