@@ -244,7 +244,7 @@ function confirmarEliminar() {
     ocultarModalEliminar();
 
     // Después de eliminar el mensaje actualizar la lista de mensajes
-    Mostrar_mensajes(id_canal);
+    //Mostrar_mensajes(id_canal);
 }
 // Cancelar la eliminación
 function cancelarEliminar() {
@@ -280,6 +280,8 @@ function eliminarMensaje(id_mensaje, nombre) {
 
         if (response.status === 200) {
             console.log("Respuesta del mensaje:", response);
+            const act =  localStorage.getItem('id_canal');
+            Mostrar_mensajes(act)
 
         } else {
             return response.json().then(data => {
@@ -406,6 +408,7 @@ function Crear_msg(id_canal, mensaje) {
 
         if (response.status === 200) {
             console.log("Respuesta del mensaje:", response);
+            Mostrar_mensajes(id_canal)
 
         } else {
             return response.json().then(data => {
