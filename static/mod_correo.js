@@ -7,7 +7,7 @@ document.getElementById("Form_correo").addEventListener("submit", function (even
 
 function Modificar_correo() {
     const data = {
-        n_foto: document.getElementById("n_correo").value,
+        n_correo: document.getElementById("n_correo").value,
     };
 
     console.log("Datos del formulario:", data); /*ayuda en consola */
@@ -46,6 +46,6 @@ function Modificar_correo() {
 let volver_perfil=document.getElementById('volver_perfil');
 volver_perfil.addEventListener('click', function(){
 
-    window.location.href = "/auth/perfil_float";   
+    window.location.href = "/auth/login";   
 
 }); 

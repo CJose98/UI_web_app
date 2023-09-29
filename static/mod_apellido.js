@@ -1,13 +1,13 @@
-/* *** MODIFICAR APELLIDO *** */
+/* *** MODIFICAR FOTO PERFIL *** */
 document.getElementById("Form_apellido").addEventListener("submit", function (event) {
     event.preventDefault();
-    Modificar_apellido();
+    Modificar_contra();
 });
 
 
-function Modificar_apellido() {
+function Modificar_contra() {
     const data = {
-        n_foto: document.getElementById("n_apellido").value,
+        n_apellido: document.getElementById("n_apellido").value,
     };
 
     console.log("Datos del formulario:", data); /*ayuda en consola */

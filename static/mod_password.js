@@ -7,7 +7,8 @@ document.getElementById("Form_contra").addEventListener("submit", function (even
 
 function Modificar_contra() {
     const data = {
-        n_foto: document.getElementById("n_contra").value,
+        a_password: document.getElementById("a_password").value,
+        n_password: document.getElementById("n_password").value,
     };
 
     console.log("Datos del formulario:", data); /*ayuda en consola */
@@ -46,6 +47,6 @@ function Modificar_contra() {
 let volver_perfil=document.getElementById('volver_perfil');
 volver_perfil.addEventListener('click', function(){
 
-    window.location.href = "/auth/perfil_float";   
+    window.location.href = "/auth/login";   
 
 }); 

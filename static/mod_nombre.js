@@ -7,10 +7,10 @@ document.getElementById("Form_nombre").addEventListener("submit", function (even
 
 function Modificar_nombre() {
     const data = {
-        n_foto: document.getElementById("n_nombre").value,
+        n_nombre: document.getElementById("n_nombre").value,   
     };
 
-    console.log("Datos del formulario:", data); /*ayuda en consola */
+    console.log("Datos del formulario:", data); /*ayuda en consola */ 
 
     fetch("http://127.0.0.1:5000/auth/mod_nombre", {
         method: 'PUT',

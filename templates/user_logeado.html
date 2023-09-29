@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuario_logeado</title>
     <link rel="stylesheet" href="../static/style_logeado.css"> 
+    <link rel="stylesheet" href="../static/chatBox.css"> 
 </head>
 <body>
     <!--MENU LATERAL-->
@@ -54,9 +55,6 @@
             </div>
         </div>
 
-
-    
-           
     
     <div id="contenido">
         <a> Aun no te has unido a un servidor <br> Intenta buscar uno o crea uno propio</a>
@@ -67,28 +65,69 @@
     <div id="busqueda">
         <form>
             <div class="input-box">
-                <input type="text" placeholder="Buscar servidor" required>
+                <input type="text" placeholder="Buscar servidor" required> 
                 <button type="submit" class="btn">Buscar</button>
             </div>    
         </form>
     </div>
     -->
+    
 
-        <div class="grid-container">
-            <div class="item-grid"><img src="../static/img/servidor/libro.png" alt="logo" width="30" height="30"><br>Literatura<br>Fantastica</div>
-            <div class="item-grid"><img src="../static/img/servidor/camara.png" alt="logo"  width="30" height="30"><br>Locura<br>Cinematografica</div>
-            <div class="item-grid"><img src="../static/img/servidor/photo.png" alt="logo" width="30" height="30"><br>Relatos de<br>Viaje</div>
-            <div class="item-grid"><img src="../static/img/servidor/corazon.png" alt="logo"  width="30" height="30"><br>Salud y<br>Bienestar</div>
-            <div class="item-grid"><img src="../static/img/servidor/joystick.png" alt="logo" width="30" height="30"><br>Central de<br>Juegos</div>
-            <div class="item-grid"><img src="../static/img/servidor/sports.png" alt="logo"  width="30" height="30"><br>Fantasticos del<br>Deporte</div>
-            <div class="item-grid"><img src="../static/img/servidor/music.png" alt="logo"  width="30" height="30"><br>Caos<br>Musical</div>
-        </div>
+    <!-- CHAT-BOX-->
+    <div class="contenedor-chat" >  <!--style="display: none;"-->
+            <div>
+                <br>Bienvenido: <span id="nombre-usuario"></span> ,  <span id="correo-usuario"></span>
+                
+            </div>
+            <div class="pantalla-chat" id="pantalla_Chat"></div>
+              <div class="ingresar_Datos_Pantalla">
+                <input type="text" id="ingresar_mensaje" placeholder="Escribe un mensaje...">
+                <button onclick="sendMessage()">Enviar</button>
+             </div>
+    </div>
+
+        <!-- Cuadro de confirmación para eliminar -->
+    <div class="modal-confirmacion" id="modalEliminar" style="display: none;">
+        <p>¿Estás seguro de que deseas eliminar este mensaje?</p>
+        <button onclick="confirmarEliminar()">Sí</button>
+        <button onclick="cancelarEliminar()">Cancelar</button>
+    </div>
 
 
 
 
+
+
+
+
+
+
+    <script>
+        function mostrarChat() {
+        var contenedorChat = document.querySelector(".contenedor-chat");
+        contenedorChat.style.display = "block";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var nombreUsuario = "{{ nombre }}";
+            var correoUsuario = "{{ correo }}";
+    
+            // Verifica si los valores de nombre y correo existen y luego los muestra
+            if (nombreUsuario && correoUsuario) {
+                document.getElementById("nombre-usuario").textContent = nombreUsuario;
+                document.getElementById("correo-usuario").textContent = correoUsuario;
+                localStorage.setItem('nombre', nombreUsuario);
+            } else {
+                // En caso de que los valores no estén disponibles
+                document.getElementById("nombre-usuario").textContent = "Usuario no logueado";
+                document.getElementById("correo-usuario").textContent = "Sin correo";
+            }
+        });
+    </script>
 
     <script src="../static/salas.js"></script>
     <script src="../static/grid.js"></script>
+    <script src="../static/llamar_.js"></script>
+
 </body>
 </html>

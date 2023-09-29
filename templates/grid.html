@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+    <link rel="stylesheet" href="../static/style_logeado.css"> 
+</head>
+<body>
+        <!-- GRID -->
+        <div class="grid-container">
+            <div class="item-grid" data-numero="1"><img src="../static/img/servidor/libro.png" alt="logo" width="60" height="60"  id="u_1"><br>Literatura<br>Fantastica</div>
+            <div class="item-grid" data-numero="2"><img src="../static/img/servidor/camara.png" alt="logo"  width="60" height="60"  id="u_2"><br>Locura<br>Cinematografica</div>
+            <div class="item-grid" data-numero="3"><img src="../static/img/servidor/photo.png" alt="logo" width="60" height="60"  id="u_2"><br>Relatos de<br>Viaje</div>
+            <div class="item-grid" data-numero="4"><img src="../static/img/servidor/corazon.png" alt="logo"  width="60" height="60"  id="u_4"><br>Salud y<br>Bienestar</div>
+            <div class="item-grid" data-numero="5"><img src="../static/img/servidor/joystick.png" alt="logo" width="60" height="60"  id="u_5"><br>Central de<br>Juegos</div>
+            <div class="item-grid" data-numero="6"><img src="../static/img/servidor/sports.png" alt="logo"  width="60" height="60"  id="u_6"><br>Fantasticos del<br>Deporte</div>
+            <div class="item-grid" data-numero="7"><img src="../static/img/servidor/music.png" alt="logo"  width="60" height="60"  id="u_7"><br>Caos<br>Musical</div>
+        </div>
+
+        <!-- Cuadro de confirmación para eliminar -->
+    <div class="modal-confirmacion" id="modalUnir" style="display: none;">
+        <p>¿Estás seguro de que deseas unirte?</p>
+        <button onclick="confirmarUnion()">Sí</button>
+        <button onclick="cancelarUnion()">Cancelar</button>
+    </div>
+
+    <script src="../static/grid.js"></script>
+</body>
+</html>

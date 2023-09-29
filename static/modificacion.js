@@ -40,8 +40,6 @@ function getProfile() {
 
 
 
-
-
 /************************************************************************ */
 
 /*  *** salir de la pantatalla de perfil*** */
@@ -53,17 +51,23 @@ volver_pantalla.addEventListener('click', function(){
 }); 
 
 
-
 /************************************************************************ */
 
 /*  *** img_perfil *** */
 let perfil=document.getElementById('perfil'); 
 perfil.addEventListener('click', function(){
 
-    window.location.href = "/auth/mod_img_perfil"; 
-       
+    window.location.href = "/auth/mod_img_perfil";    
 
-}); 
+});
+
+
+
+
+
+
+
+
 /*  *** nombre_user *** */
 let user=document.getElementById('user');  
 user.addEventListener('click', function(){

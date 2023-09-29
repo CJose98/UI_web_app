@@ -12,6 +12,11 @@
         <form id="Crear_Form_canal">
             <h1>Crear Canal</h1>
 
+            <div>
+                <p>Bienvenido: <span id="nombre-usuario"></span></p>
+                <p>Correo electrónico: <span id="correo-usuario"></span></p>
+            </div>
+
             <div class="input-box">
                 <input type="text" id="canal" name="canal" placeholder="crear canal" required>
             </div>
@@ -21,6 +26,24 @@
 
         <div id="message"></div>
     </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var nombreUsuario = "{{ nombre }}";
+            var correoUsuario = "{{ correo }}";
+    
+            // Verifica si los valores de nombre y correo existen y luego los muestra
+            if (nombreUsuario && correoUsuario) {
+                document.getElementById("nombre-usuario").textContent = nombreUsuario;
+                document.getElementById("correo-usuario").textContent = correoUsuario;
+            } else {
+                // En caso de que los valores no estén disponibles
+                document.getElementById("nombre-usuario").textContent = "Usuario no logueado";
+                document.getElementById("correo-usuario").textContent = "Sin correo";
+            }
+        });
+    </script>
 
     <script src="../static/crear_canal.js"></script>
 </body>

@@ -7,12 +7,12 @@ document.getElementById("Form_user").addEventListener("submit", function (event)
 
 function Modificar_user_name() {
     const data = {
-        n_foto: document.getElementById("n_user_name").value,
+        n_user: document.getElementById("n_user").value,
     };
 
     console.log("Datos del formulario:", data); /*ayuda en consola */
 
-    fetch("http://127.0.0.1:5000/auth/mod_usuario", {/*fijate si esta bien la direccion que le pase a cada uno */
+    fetch("http://127.0.0.1:5000/auth/mod_usuario", {/*fijate si esta bien la direccion que le pase a cada uno */ 
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
