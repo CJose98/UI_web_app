@@ -18,8 +18,8 @@ function getSala() {
             // Parsear la respuesta como JSON
             return response.json();
         } 
-        if (response.status === 200 && response.message === "Usuario no tiene servidores") {
-            return document.getElementById("message").innerHTML = "Usuario no tiene servidores";
+        if (response.message === "No se encontraron servidores") {
+            console.log(" ********** BUSCAR ERROR  2 ****************************")
 
         } else {
             return response.json().then(data => {
@@ -51,6 +51,6 @@ function getSala() {
     })
     .catch(error => {
         console.error("Error en la solicitud:", error);
-        document.getElementById("message").innerHTML = "An error occurred.";
+        document.getElementById("message").innerHTML = "";
     });
 }
