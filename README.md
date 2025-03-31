@@ -69,17 +69,29 @@ Variebale de entorno:
 ### Implementando MVC (Modelo-Vista-Controlador) en Flask
 
 /../Discor
+
 |--app/
+
 |  |--controllers/      <- Lógica de negocio
+
 |  |--models/           <- Entidades y DB
+
 |  |--routes/           <- Blueprints de Flask
+
 |  |--static/           <- CSS, JS, imágenes
+
 |  |--templates/        <- Vistas HTML
+
 |  |--init_.py/         <- Factory de la app
+
 |  |--database.py/      <- Conexión a MySQL
+
 |--env                  <- Entorno
+
 |--config.py            <- Configuración global
+
 |--requirements.txt     <- Dependencias
+
 |--run.py               <- Ejecucion del codigo
 
 
